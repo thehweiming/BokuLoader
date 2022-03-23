@@ -31,6 +31,7 @@ Cobalt Strike [User-Defined Reflective Loader](https://hstechdocs.helpsystems.co
   + Set the stagesize to 412256 within `build.sh` of the artifact kit.
   ![](/images/changeStagesize.png)
   + Build the Artifacts.
+  + + Set the stagesize to 412256 within artifact.cna
   + Load the Artifact Aggressor script via the Script Manager within the CS GUI client.
   ![](/images/loadArtifact.png)
 5. Import the `BokuLoader.cna` Aggressor script via the Script Manager.
