@@ -37,6 +37,15 @@ Cobalt Strike [User-Defined Reflective Loader](https://hstechdocs.helpsystems.co
   ![](/images/loadRdllScriptMenu.png)
 6. Generate a beacon payload (`Attacks` -> `Packages` -> `Windows Executable (S)`)
   ![](/images/CreateBeaconStageless.png)
+  
+
+## Weird Errors & Fixes
+1.
+Although exec($Compile) runs fine and readAll($procexec) is able to reach the handle of this exec process, for some reason -isFile $pRlOF returns false and the subsequent closef($procexec) fails. This was verified by manually executing the $Compile command, and subsequent invocations of the boku CNA did indeed replace the file.
+Solution: Manaully commpile the BokuLoader.c files to generate the object files, and comment out the closef($procexec) line and deleteFile($pRlOF).
+
+
+
 
 ## Credits / References
 ### Reflective Loader
